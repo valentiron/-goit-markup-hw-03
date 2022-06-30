@@ -14,6 +14,8 @@
   --second-section-color: #2f303a;
 
   /* Others */
+
+  --set-gap:30px;
 }
 
 body {
@@ -22,8 +24,36 @@ body {
   line-height: 1.71;
   color: var(--main-txt-color);
 }
+ 
+/* Reset start*/
+h1,h2,h3,h4,p,ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reset end */
+
 
 /* Common styles start */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin: 0;
+}
 
 .link {
   text-decoration: none;
@@ -31,6 +61,8 @@ body {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .btn {
@@ -42,7 +74,11 @@ body {
   cursor: pointer;
 }
 
+
 .section-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -50,11 +86,45 @@ body {
   color: var(--dark-txt-color);
 }
 
+.visually-hidden {
+  position: absolute;
+   width: 1px;
+    height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+    clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+  }
+
 /* Common styles end */
 
 /* Header section start */
 .header {
   background-color: var(--white-color);
+  border-bottom: 1px solid #ECECEC;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+    align-items: center;
+}
+
+.header-contacts {
+  display: flex;
+    align-items: center;
 }
 
 .header-logo,
@@ -67,11 +137,24 @@ body {
   color: var(--accent-color);
 }
 
+.header-logo {
+  margin-right: 93px;
+      padding-top: 24px;
+      padding-bottom: 25px;
+}
+
 .header-logo-color {
   color: var(--header-logo-color);
 }
 
+.header-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -79,8 +162,16 @@ body {
   color: var(--dark-txt-color);
 }
 
+.header-contacts {
+  margin-left: auto;
+}
+
 .header-contact {
   color: var(--main-txt-color);
+}
+
+.header-contact-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-link:hover,
@@ -105,7 +196,15 @@ body {
   background-color: var(--second-section-color);
 }
 
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+
 .btn-hero {
+  padding: 10px 32px;
+  margin-bottom: 106px;
   color: var(--white-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -139,6 +238,10 @@ body {
 }
 
 .main-title {
+ width: 696px;
+ height: 120px;
+ margin-top: 106px;
+ margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -148,7 +251,21 @@ body {
   color: var(--white-color);
 }
 
+
+.skills-flex {
+  display: flex;
+}
+
+.skills-item {
+flex-basis: 270px;
+}
+
+.skills-item:not(:last-child) {
+  margin-right: var(--set-gap);
+}
+
 .skills-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -162,15 +279,41 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-txt-color);
 }
+
+.work-section {
+  padding-top: 0;
+}
+
+.work-list {
+  display: flex;
+}
+
+.work-item:not(:last-child) {
+  margin-right:var(--set-gap);
+}
+
 .team {
   background-color: var(--section-bg-color);
 }
 
+.team-list {
+  display: flex;
+flex-wrap: wrap;
+margin-left: -15px;
+margin-top: -15px;
+}
+
 .team-item {
+flex-basis: calc((100% - 30px * 4) / 4);
+margin-top: 15px;
+margin-left: 15px;
+margin-right: 15px;
+
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  overflow:hidden ;
 }
 
 .person {
@@ -180,9 +323,18 @@ body {
     letter-spacing: 0.03em;
 }
 
+.person-img {
+  margin-bottom: 30px;
+}
+
+.person-descript {
+  margin-bottom: 30px;
+}
+
 .person-name {
   font-weight: 500;
 color: var(--dark-txt-color);
+margin-bottom: 10px;
 }
 
 .person-position {
@@ -213,10 +365,21 @@ color: var(--main-txt-color);
 /* Footer styles start */
 .footer {
   background-color: var(--second-section-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .footer-logo-color {
   color: var(--white-color);
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-link {
