@@ -196,17 +196,12 @@ img {
 
 .hero {
   background-color: var(--second-section-color);
-}
-
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 200px 0;
+  text-align: center;
 }
 
 .btn-hero {
   padding: 10px 32px;
-  margin-bottom: 106px;
   color: var(--white-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -253,8 +248,9 @@ img {
 
 .main-title {
   width: 696px;
-  margin-top: 106px;
-  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--set-gap);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -319,7 +315,7 @@ img {
   flex-basis: calc((100% - var(--set-gap) * 4) / 4);
   margin-top: var(--set-gap);
   margin-left: var(--set-gap);
-  
+
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -334,12 +330,8 @@ img {
   letter-spacing: 0.03em;
 }
 
-.person-img {
-  margin-bottom: 30px;
-}
-
 .person-descript {
-  margin-bottom: 30px;
+  padding: 30px 0;
 }
 
 .person-name {
@@ -360,13 +352,13 @@ img {
 
 .project-list {
   display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--set-gap));
-    margin-top: calc(-1 * var(--set-gap));
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--set-gap));
+  margin-top: calc(-1 * var(--set-gap));
 }
 
 .project-item {
-flex-basis: calc((100% - var(--set-gap) * 3) / 3);
+  flex-basis: calc((100% - var(--set-gap) * 3) / 3);
   margin-top: var(--set-gap);
   margin-left: var(--set-gap);
   background: var(--white-color);
@@ -374,7 +366,9 @@ flex-basis: calc((100% - var(--set-gap) * 3) / 3);
 
 .project-description {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .project-name {
@@ -386,6 +380,7 @@ flex-basis: calc((100% - var(--set-gap) * 3) / 3);
 }
 
 .project-type {
+  margin-top: 4px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
